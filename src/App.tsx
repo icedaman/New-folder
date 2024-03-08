@@ -1,33 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import  CarouselWithContent  from "./Carousel"
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="bg-zinc-900 w-full h-screen">
+        <div className='grid lg:grid-cols-6 sm:gap-6 py-8 px-8 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:gap-2'>
+          <div className="bg-red-700 h-20"></div>
+          <div className="bg-red-700 h-20"></div>
+          <div className="bg-red-700 h-20"></div>
+          <div className="bg-red-700 h-20"></div>
+          <div className="bg-red-700 h-20"></div>
+          <div className="bg-red-700 h-20"></div>
+        </div>
+          <CarouselWithContent />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+       
     </>
   )
 }
